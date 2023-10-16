@@ -2,7 +2,10 @@
   "name": "@nx/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve:hotel": "nx serve -p hotel",
+    "build:hotel": "nx build -p hotel"
+  },
   "private": true,
   "dependencies": {
     "@swc/helpers": "~0.5.2",
