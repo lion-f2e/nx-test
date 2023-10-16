@@ -5,7 +5,7 @@
   "scripts": {
     "serve:hotel": "nx serve -p hotel",
     "build:hotel": "nx build -p hotel",
-    "lint:hotel": "nx lint -p hotel"
+    "lint:hotel": "nx lint -p hotel",
   },
   "private": true,
   "dependencies": {
@@ -15,6 +15,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@commitlint/config-nx-scopes": "^17.6.4",
     "@nx/eslint-plugin": "16.10.0",
     "@nx/js": "16.10.0",
     "@nx/linter": "16.10.0",
@@ -33,6 +34,7 @@
     "@vitest/coverage-c8": "~0.32.0",
     "@vitest/ui": "~0.32.0",
     "autoprefixer": "10.4.13",
+    "commitlint": "^17.8.0",
     "eslint": "~8.46.0",
     "eslint-config-haku": "^1.0.11",
     "eslint-config-prettier": "8.1.0",
@@ -40,6 +42,7 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^8.0.3",
     "jsdom": "~22.1.0",
     "nx": "16.10.0",
     "postcss": "8.4.21",
@@ -48,5 +51,6 @@
     "typescript": "~5.1.3",
     "vite": "~4.3.9",
     "vitest": "~0.32.0"
+  },
   }
 }
