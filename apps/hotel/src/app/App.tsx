@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './App.module.css';
+import styles from "./App.module.css";
 
 export function App() {
   return (
@@ -22,15 +22,15 @@ if (import.meta.vitest) {
   let render: any;
 
   beforeEach(async () => {
-    render = (await import('@testing-library/react')).render;
+    render = (await import("@testing-library/react")).render;
   });
 
-  it('should render successfully', () => {
+  it("should render successfully", () => {
     const { baseElement } = render(<App />);
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have a greeting as the title', () => {
+  it("should have a greeting as the title", () => {
     const { getByText } = render(<App />);
     expect(getByText(/Welcome hotel/gi)).toBeTruthy();
   });

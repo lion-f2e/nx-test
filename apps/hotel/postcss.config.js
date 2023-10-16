@@ -1,3 +1,3 @@
-const postcssHandler = require('../../configs/postcss');
+const postcssHandler = require("../../configs/postcss");
 
 module.exports = postcssHandler(__dirname);

@@ -5,7 +5,15 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "extends": ["haku/react"],
+      "parserOptions": {
+        "project": ["apps/*/tsconfig.app.json", "tsconfig.base.json"]
+      },
       "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          { "devDependencies": true }
+        ],
         "@nx/enforce-module-boundaries": [
           "error",
           {
