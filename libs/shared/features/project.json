@@ -9,7 +9,8 @@
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/shared/features/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/shared/features/**/*.{ts,tsx,js,jsx}"],
+        "fix": true
       }
     },
     "test": {

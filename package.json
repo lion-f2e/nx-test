@@ -7,8 +7,15 @@
     "test:hotel": "nx test -p hotel",
     "build:hotel": "nx build -p hotel",
     "lint:hotel": "nx lint -p hotel",
+
     "lint:features": "nx lint -p shared-features",
     "test:features": "nx test -p shared-features",
+
+    "lint:utils": "nx lint -p utils",
+    "test:utils": "nx test -p utils",
+    
+    "lint":"nx run-many -t lint",
+    "test":"nx run-many -t test",
     "commit": "git-cz"
   },
   "private": true,
@@ -39,6 +46,7 @@
     "@vitest/coverage-c8": "~0.32.0",
     "@vitest/ui": "~0.32.0",
     "autoprefixer": "10.4.13",
+    "clsx": "^2.0.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "~8.46.0",
@@ -49,6 +57,7 @@
     "nx": "16.10.0",
     "postcss": "8.4.21",
     "prettier": "^3.0.3",
+    "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.2.7",
     "typescript": "~5.1.3",
     "vite": "~4.3.9",
