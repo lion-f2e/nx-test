@@ -19,6 +19,7 @@ if (import.meta.vitest) {
   // For more information please visit the Vitest docs site here: https://vitest.dev/guide/in-source.html
 
   const { it, expect, beforeEach } = import.meta.vitest;
+  // eslint-disable-next-line
   let render: any;
 
   beforeEach(async () => {
