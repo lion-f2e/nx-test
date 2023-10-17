@@ -6,7 +6,7 @@ function NavCard({ route, label, query }: Route) {
       target="_blank"
       rel="noreferrer"
       className="block p-3 shadow-md hover:shadow-lg transition text-center"
-      href={`${route}?${query}`}
+      href={`${route}${query ? `?${query}` : ""}`}
     >
       <h2>{label}</h2>
     </a>

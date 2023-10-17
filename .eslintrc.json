@@ -11,15 +11,15 @@
   },
   "settings": {
     "import/resolver": {
-        "typescript": {
-          "alwaysTryTypes": true,
-          "project": [
-            "apps/*/tsconfig.json",
-            "libs/*/**/tsconfig.json",
-            "tsconfig.base.json"
-          ]
-        }
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": [
+          "apps/*/tsconfig.json",
+          "libs/*/**/tsconfig.json",
+          "tsconfig.base.json"
+        ]
       }
+    }
   },
   "overrides": [
     {
@@ -54,7 +54,10 @@
     },
     {
       "files": ["*.tsx", "*.jsx"],
-      "extends": ["plugin:@nx/react", "haku/react"]
+      "extends": ["plugin:@nx/react", "haku/react"],
+      "rules": {
+        "react/require-default-props": "off"
+      }
     }
   ]
 }
