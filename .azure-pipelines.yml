@@ -1,0 +1,42 @@
+trigger:
+  - master
+pr:
+  - master
+
+variables:
+  CI: "true"
+  NX_BRANCH: $(Build.SourceBranchName)
+  DEFAULT_BASE_SHA: $(git rev-parse HEAD~1)
+  HEAD_SHA: $(git rev-parse HEAD)
+
+jobs:
+  - job: main
+    pool:
+      vmImage: "ubuntu-latest"
+    steps:
+      - checkout: self # Required as first property. Configures checkout for the specified repository.
+        fetchDepth: "0"
+      # Set Azure Devops CLI default settings
+      - bash: az devops configure --defaults organization=$(System.TeamFoundationCollectionUri) project=$(System.TeamProject)
+        displayName: "Set default Azure DevOps organization and project"
+
+      # Get last successfull commit from Azure Devops CLI
+      - bash: |
+          LAST_SHA=$(az pipelines build list --branch $(Build.SourceBranchName) --definition-ids $(System.DefinitionId) --result succeeded --top 1 --query "[0].triggerInfo.\"ci.sourceSha\"")
+          if [ -z "$LAST_SHA" ]
+          then
+            LAST_SHA=$DEFAULT_BASE_SHA
+          fi
+          echo "Last successful commit SHA: $LAST_SHA"
+          echo "##vso[task.setvariable variable=BASE_SHA]$LAST_SHA"
+        displayName: "Get last successful commit SHA"
+        env:
+          AZURE_DEVOPS_EXT_PAT: $(System.AccessToken)
+      - script: |
+          corepack enable
+          corepack prepare pnpm@latest-8 --activate
+          pnpm config set store-dir $(pnpm_config_cache)
+        displayName: "Setup pnpm"
+
+      - script: pnpm install --frozen-lockfile
+      - script: pnpm dlx nx affected --base=$(BASE_SHA) -t build --parallel=3
