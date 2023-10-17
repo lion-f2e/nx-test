@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "serve:hotel": "nx serve -p hotel",
+    "test:hotel": "nx test -p hotel",
     "build:hotel": "nx build -p hotel",
     "lint:hotel": "nx lint -p hotel",
     "commit": "git-cz"
