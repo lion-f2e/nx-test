@@ -41,7 +41,7 @@
     },
     {
       "files": ["*.tsx", "*.jsx"],
-      "extends": ["haku/react"]
+      "extends": ["plugin:@nx/react","haku/react"]
     }
   ]
 }
