@@ -5,8 +5,8 @@
   "scripts": {
     "serve:hotel": "nx serve -p hotel",
     "test:hotel": "nx test -p hotel",
-    "build:hotel": "nx build -p hotel",
     "lint:hotel": "nx lint -p hotel",
+    "preview:hotel": "nx preview -p hotel",
 
     "lint:features": "nx lint -p shared-features",
     "test:features": "nx test -p shared-features",
