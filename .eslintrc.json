@@ -32,6 +32,13 @@
       "parserOptions": {
         "project": ["apps/*/tsconfig.app.json", "tsconfig.base.json"]
       },
+      "settings": {
+        "import/resolver": {
+          "typescript": {
+            "project": ["apps/*/tsconfig.app.json", "tsconfig.base.json"]
+          }
+        }
+      },
       "rules": {}
     },
     {
