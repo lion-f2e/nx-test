@@ -5,7 +5,7 @@
   "parserOptions": {
     "project": [
       "apps/*/tsconfig.app.json",
-      "libs/**/tsconfig.json",
+      "libs/*/**/tsconfig.json",
       "tsconfig.base.json"
     ]
   },
@@ -15,7 +15,7 @@
           "alwaysTryTypes": true,
           "project": [
             "apps/*/tsconfig.json",
-            "libs/**/tsconfig.json",
+            "libs/*/**/tsconfig.json",
             "tsconfig.base.json"
           ]
         }
@@ -26,10 +26,7 @@
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "extends": ["haku"],
       "rules": {
-        "import/no-extraneous-dependencies": [
-          "error",
-          { "devDependencies": true }
-        ],
+        "import/no-extraneous-dependencies": "off",
         "@nx/enforce-module-boundaries": [
           "error",
           {
