@@ -1,14 +1,5 @@
 import viteHandler from "../../configs/vite";
 
-const entryPoints = [
-  {
-    name: "main",
-    html: "index.html",
-  },
-  {
-    name: "search",
-    html: "src/search/index.html",
-  },
-];
+const pageNames = ["search"];
 
-export default viteHandler(__dirname, entryPoints);
+export default viteHandler(__dirname, pageNames);

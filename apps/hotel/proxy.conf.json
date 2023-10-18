@@ -1,7 +1,0 @@
-{
-  "/uhotelzkk": {
-    "target": "https://uhotelzkk.liontravel.com",
-    "secure": true,
-    "changeOrigin": true
-  }
-}
