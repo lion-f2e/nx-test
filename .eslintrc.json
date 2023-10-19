@@ -14,7 +14,7 @@
       "typescript": {
         "alwaysTryTypes": true,
         "project": [
-          "apps/*/tsconfig.json",
+          "apps/*/tsconfig.app.json",
           "libs/*/**/tsconfig.json",
           "tsconfig.base.json"
         ]

@@ -1,4 +1,4 @@
-import type { Navigation } from "@shared-features/home";
+import { type Navigation } from "@shared-features/home";
 
 const navigation: Navigation = [
   { label: "Search", route: "./search.html" },

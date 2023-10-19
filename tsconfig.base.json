@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@shared-features/*": ["libs/shared/features/src/*"],
-      "@utils/*": ["libs/utils/src/*"]
+      "@utils/*": ["libs/utils/src/*"],
+      "@data-*": ["libs/data/src/*/index.ts"],
     }
   },
   "exclude": ["node_modules", "tmp"]

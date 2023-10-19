@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import * as ReactDOM from "react-dom/client";
-import "./global.css";
+import "./styles.css";
 
 import { HomeLayout } from "@shared-features/home";
 import navigation from "./constants/navigation";
