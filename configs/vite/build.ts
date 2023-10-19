@@ -17,7 +17,7 @@ export default function (rootDir: string, pageNames: string[]) {
       },
 
       output: {
-        assetFileNames: ({ name }) => {
+        assetFileNames: ({ name }: any) => {
           let extType = name?.split(".").at(-1) ?? "";
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
             return `assets/[name][extname]`;
