@@ -29,7 +29,7 @@
       "configurations": {
         "development": {
           "buildTarget": "hotel:build:development",
-          "proxyConfig": "apps/hotel/proxy.conf.js",
+          "proxyConfig": "apps/hotel/proxy.conf.ts",
           "hmr": true
         },
         "production": {
