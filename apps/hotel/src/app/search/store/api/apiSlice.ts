@@ -8,8 +8,10 @@ export const apiSlice = createApi({
     getHotelList: builder.query<void, GetHotelListSearchParams>({
       query: (searchParam) => ({
         url: "/search/gethotellist",
-        params: searchParam,
+        params: { searchParam: JSON.stringify(searchParam) },
       }),
     }),
   }),
 });
+
+export const { useGetHotelListQuery } = apiSlice;
