@@ -7,6 +7,9 @@
     "test:hotel": "nx test -p hotel",
     "lint:hotel": "nx lint -p hotel",
     "preview:hotel": "nx preview -p hotel",
+    "rel:hotel": "nx build -p hotel --mode release",
+    "prod:hotel": "nx build -p hotel --mode production",
+
     "lint:features": "nx lint -p shared-features",
     "test:features": "nx test -p shared-features",
     "lint:utils": "nx lint -p utils",

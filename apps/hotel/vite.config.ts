@@ -9,22 +9,24 @@ import {
 
 const pageNames = ["search"];
 
-export default defineConfig({
-  define: { "import.meta.vitest": undefined },
-  cacheDir: "../../node_modules/.vite/hotel",
+export default defineConfig(() => {
+  return {
+    define: { "import.meta.vitest": undefined },
+    cacheDir: "../../node_modules/.vite/hotel",
 
-  plugins: [...plugins],
+    plugins: [...plugins],
 
-  server: { ...getServeOptions() },
+    server: { ...getServeOptions() },
 
-  build: { ...getBuildOptions(__dirname, pageNames) },
+    build: { ...getBuildOptions(__dirname, pageNames) },
 
-  preview: { ...getPreviewOptions() },
+    preview: { ...getPreviewOptions() },
 
-  test: { ...getTestOptions() },
+    test: { ...getTestOptions() },
 
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [ nxViteTsPaths() ],
-  // },
+    // Uncomment this if you are using workers.
+    // worker: {
+    //  plugins: [ nxViteTsPaths() ],
+    // },
+  };
 });
