@@ -4,6 +4,6 @@ module.exports = {
     target: "https://uhotelzkk.liontravel.com",
     secure: true,
     changeOrigin: true,
-    rewrite: (path: string) => path.replace("/uhotelzkk", ""),
+    rewrite: (path) => path.replace("/uhotelzkk", ""),
   },
 };

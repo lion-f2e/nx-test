@@ -16,7 +16,13 @@ export default function (rootDir: string, pageNames: string[]) {
         }, {}),
       },
 
+      // external: ["react", "react-dom"],
       output: {
+        // globals: {
+        //   react: "React",
+        //   "react-dom": "ReactDom",
+        // },
+
         assetFileNames: ({ name }: any) => {
           let extType = name?.split(".").at(-1) ?? "";
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
@@ -25,8 +31,6 @@ export default function (rootDir: string, pageNames: string[]) {
 
           return `[name]/[name]-[hash][extname]`;
         },
-
-        // chunkFileNames: "[name]/js/[name]-[hash].js",
 
         entryFileNames: "[name]/[name]-[hash].js",
       },
