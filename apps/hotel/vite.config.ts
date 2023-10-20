@@ -7,7 +7,7 @@ import {
   getServeOptions,
 } from "../../configs/vite";
 
-const pageNames = ["search"];
+const pageNames = ["search", "detail"];
 
 export default defineConfig(() => {
   return {
